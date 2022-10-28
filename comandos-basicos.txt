@@ -12,3 +12,15 @@ kubectl describe pod <name-pod>
 
 #Atualizar configurações de um pod
 kubectl edit pod <name-pod>
+
+#Remover um pod (imperativo)
+kubectl delete pod <name-pod>
+
+#Remover um pod (declarativo)
+kubectl delete -f .\<caminho | name-arquivo>.yaml
+
+
+
+
+
+
