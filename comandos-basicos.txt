@@ -19,6 +19,10 @@ kubectl delete pod <name-pod>
 #Remover um pod (declarativo)
 kubectl delete -f .\<caminho | name-arquivo>.yaml
 
+#acessar terminal de container dentro do pod
+kubectl exec -it <name-pod> -- bash 
+
+
 
 
 
