@@ -31,7 +31,8 @@ kubectl rollout history deployment <name-deployment>
 #Alterar anotação da versão de mudança
 kubectl annotate deployment <name-deployment> kubernetes.io/change-cause="msg"
 
-
+#Realizar rooback de versao
+kubectl rollout undo deployment <name-deployment> --to-revision=<number>
 
 
 
