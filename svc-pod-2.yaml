@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   name: svc-pod-2
 spec:
-  type: ClusterIp
+  type: ClusterIP
   selector:
     app: segundo-pod
   ports:
