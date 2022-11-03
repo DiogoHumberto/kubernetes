@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: primeiro-pod
+  name: pod-1
   labels:
     app: primeiro-pod
 spec:
