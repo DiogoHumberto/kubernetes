@@ -11,10 +11,10 @@ spec:
         app: nginx-app
     spec:
       containers:
-        - name: nginx-containe
+        - name: nginx-container
           image: nginx:stabl
           volumeMounts: 
-            - mountPath: /home
+            - mountPath: /volume-pod
               name: volume-pod
       volumes:
         - name: volume-pod
