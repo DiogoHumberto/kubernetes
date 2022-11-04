@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: pod-1-deployment
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       name: nginx-app
@@ -12,7 +12,14 @@ spec:
     spec:
       containers:
         - name: nginx-containe
-          image: nginx:stable
+          image: nginx:stabl
+          volumeMounts: 
+            - mountPath: /home
+              name: volume-pod
+      volumes:
+        - name: volume-pod
+          hostPath:
+            path: /C/volume-pods
   selector:
     matchLabels:
       app: nginx-app
