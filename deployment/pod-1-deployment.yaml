@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: nginx:stabl
+          image: nginx:latest
           volumeMounts: 
             - mountPath: /volume-pod
               name: volume-pod
