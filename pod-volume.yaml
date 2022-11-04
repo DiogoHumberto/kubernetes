@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+      volumeMounts:
+        - mountPath: /pasta-de-arquivos
+          name: volume-pod
+  volumes:
+    - name: volume-pod
+      hostPath:
+        path: /C/volumes-pods
+        type: Directory

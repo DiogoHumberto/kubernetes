@@ -19,7 +19,7 @@ spec:
       volumes:
         - name: volume-pod
           hostPath:
-            path: /C/volume-pods
+            path: /C/volumes-pods
             type: Directory
   selector:
     matchLabels:
