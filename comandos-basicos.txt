@@ -34,7 +34,16 @@ kubectl annotate deployment <name-deployment> kubernetes.io/change-cause="msg"
 #Realizar rooback de versao
 kubectl rollout undo deployment <name-deployment> --to-revision=<number>
 
+#Criando chave secret registry image 
+kubectl create secret docker-registry <name>.secret --docker-server <Endereco !!ex: alurasportsregistryls.azurecr.io> --docker-username <username> --docker-password <password>
 
+#version kubernetes
+kubectl version
+
+#obter os nos kubernetes
+kubectl get nodes --all-namespaces
+#ou
+kubectl get nodes
 
 
 

@@ -1,0 +1,40 @@
+!!!IMPORTANT INSTALL AZURE CLI!!!!
+
+!alterar kubectl local para azure!
+az aks get-credentials --name <name-aks> --resource-group <group-name>
+
+#Create group resources
+az group create --name aluracli-rg --location eastus
+
+#list group resources
+az group list --output table
+#ou
+az group list
+
+#create aks 
+az aks create -h (help)
+az aks create --name <name> --node-count 1 --resource-group <name-group> --location eastus --generate-ssh-keys
+
+#list aks 
+az aks list --output table
+
+#create registy image azure
+az acr create --name <name-acr> --resource-group <group-name> --sku Basic --location eastus --admin-enabled
+
+#login acr
+az acr login --name <name-acr>
+
+#Docker tag image
+docker tag <image-local-docker> <image-destino>
+
+#Docker push 
+docker push <image-destino>
+
+#listar credential acr
+az acr credential show --name <name-acr>
+
+#create secret acr registry
+kubectl create secret docker-registry aluracliregistryls.secret --docker-server  aluracliregistryls.azurecr.io --docker-username aluracliregistryls --docker-password ue1Q+7DHgZwLAVW8yTs7YG6OoksMdSD+
+
+
+az aks Get-Credentials --name alurasports-k8s --resource-group alurasports-rg
